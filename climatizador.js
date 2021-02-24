@@ -1,6 +1,6 @@
 
 
-// Cuanto subimos o bajamos la temperatura 
+// Cuanto subimos o bajamos la temperatura
 const DELTA = 0.1;
 
 
@@ -10,7 +10,7 @@ const DELTA = 0.1;
 //    enfriar
 //    calentar
 class Climatizador {
-	
+
 	constructor(habitacion) {
 
 		this.habitacion = habitacion;
@@ -25,6 +25,12 @@ class Climatizador {
 		console.log('Calentando.')
         this.habitacion.temperatura += DELTA;
 	}
+
+  climatizar(temp){
+    this.temp=temp;
+    this.habitacion.temperatura=this.temp;
+    console.log(`Aplicando climatización a ${temp.toFixed(1)}ºC`);
+  }
 }
 
 exports = module.exports = Climatizador;

@@ -15,5 +15,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js"
+  },
+  "dependencies": {
+    "later": "^1.2.0"
   }
 }
