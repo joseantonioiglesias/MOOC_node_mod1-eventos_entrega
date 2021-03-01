@@ -10,10 +10,10 @@
     this.escuchadores[evento].push(escuchador);
   }
 
-  emit(evento, args) {
+  emit(evento, ...args) {
     let escuchador = this.escuchadores[evento];
     escuchador.forEach((esc) => {
-      esc(args);
+      esc(...args);
     });
   }
 }
